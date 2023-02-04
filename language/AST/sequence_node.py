@@ -1,5 +1,5 @@
 from . import ExpressionNode
-from .. import TokenTags
+from ..tokens import TokenTags
 
 
 class SequenceNode(ExpressionNode):
@@ -20,9 +20,4 @@ class SequenceNode(ExpressionNode):
         self.sequence.append(node)
 
     def __repr__(self) -> str:
-        return (
-            f"{self.sequence}"
-            .replace("[", "")
-            .replace("]", "")
-            .replace(",", "")
-        )
+        return ', '.join([str(e) for e in self.sequence])

@@ -1,5 +1,5 @@
 from . import ExpressionNode
-from .. import TokenTags
+from ..tokens import TokenTags
 
 
 class SetNode(ExpressionNode):

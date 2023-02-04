@@ -1,9 +1,3 @@
-from .tokens import *
-from .lexer import Lexer
-from .parser import Parser
+from .interpreter import Interpreter
 
-__all__ = [
-    'TokenType', 'TokenTypes', 'Token', 
-    'Lexer', 'Parser',
-    'TokenTag', 'TokenTags',
-]
+__all__ = ['Interpreter']

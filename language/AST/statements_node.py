@@ -1,5 +1,7 @@
+from typing import Iterator
+
 from . import ExpressionNode
-from .. import TokenTags
+from ..tokens import TokenTags
 
 
 class StatementsNode(ExpressionNode):
@@ -18,3 +20,6 @@ class StatementsNode(ExpressionNode):
 
     def __repr__(self) -> str:
         return str(self.lines)
+
+    def __iter__(self) -> Iterator[ExpressionNode]:
+        return iter(self.lines)

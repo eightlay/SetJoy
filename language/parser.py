@@ -1,18 +1,19 @@
 from typing import Iterable
 
-from . import Token, TokenTypes, TokenTag, TokenTags, TagsPairs
 from .AST import *
+from .lexer import Lexer
+from .tokens import Token, TokenTypes, TokenTag, TokenTags, TagsPairs
 
 
 class Parser:
-    def __init__(self, tokens: list[Token]) -> None:
-        self.tokens = tokens
+    def __init__(self, lexer: Lexer) -> None:
+        self.tokens = lexer.analyze()
         self.pos = 0
         self.line = 1
         self.stack: list[ExpressionNode] = []
         self.root = StatementsNode()
 
-    def parse_code(self) -> ExpressionNode:
+    def parse_code(self) -> StatementsNode:
         while self.pos < len(self.tokens):
             line = self.parse_line()
             self.add_line(line)

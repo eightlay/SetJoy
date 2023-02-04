@@ -1,5 +1,5 @@
 from . import ExpressionNode
-from .. import Token, TokenTags
+from ..tokens import Token, TokenTags
 
 
 class BinaryNode(ExpressionNode):

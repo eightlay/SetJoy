@@ -1,6 +1,6 @@
 from abc import ABC, abstractproperty
 
-from .. import TokenTags
+from ..tokens import TokenTags
 
 
 class ExpressionNode(ABC):
