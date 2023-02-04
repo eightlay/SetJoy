@@ -5,8 +5,11 @@ Programming language for working with sets
 Sketch stage:
 - lexer ✅
 - parser ✅
-- interpreter ❌ (NEXT)
+- interpreter ☑ (IN WORK)
 - compile into application ❌ (QUEUED)
 
 ## How to use
-*TODO*
+`python3 main.py`
+
+## Example
+!['Usage example'](info/usage_example.jpg)
